@@ -1,4 +1,3 @@
 [build]
-    base = "main"
     publish = "build"
     command = "npm run build"
