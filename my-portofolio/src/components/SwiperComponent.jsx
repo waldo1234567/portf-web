@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
@@ -12,12 +12,13 @@ import Project3 from "../images/project3.png";
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 const TruncateContent = ({ item, screenWidth, dark, onReadMore }) => {
-    const truncate = () => {
+    const truncate = useCallback(() => {
         if (screenWidth > 768) {
             return item.content;
         }
         return item.content.length > 75 ? item.content.slice(0, 75) + '...' : item.content;
-    };
+    },[screenWidth, item.content]);
+
     const [truncatedContent, setTruncatedContent] = useState(truncate);
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const TruncateContent = ({ item, screenWidth, dark, onReadMore }) => {
         return () => {
             window.removeEventListener('resize', handleResize);
         }
-    }, [screenWidth, item.content]);
+    }, [truncate]);
     return (
         <div>
             <p className={`${dark ? "dark:text-slate-100" : ''}`}>{truncatedContent}</p>
@@ -139,15 +140,15 @@ const SwiperComponent = ({ dark }) => {
                     opacity: selectedItem ? 1 : 0,
                     transition: 'opacity 0.3s ease-in-out',
                 }}>
-                    <div className={`${dark ? 'bg-slate-800' :'bg-white' } rounded-lg p-8 max-w-md w-full`} style={{
+                    <div className={`${dark ? 'bg-slate-800' : 'bg-white'} rounded-lg p-8 max-w-md w-full`} style={{
                         transform: selectedItem ? 'scale(1)' : 'scale(0.5)',
                         transition: 'transform 0.3s ease-in-out',
                     }}>
                         <button onClick={handleClosePopup} className="absolute top-2 right-2 text-gray-600 dark:text-gray-300">
                             <CloseOutlinedIcon />
                         </button>
-                        <h2 className={`text-2xl font-bold mb-4 ${dark? 'text-slate-100' : 'text-black'}`}>{selectedItem.title}</h2>
-                        <p className={`mb-4 ${dark? 'text-slate-100' : 'text-black'}`}>{selectedItem.content}</p>
+                        <h2 className={`text-2xl font-bold mb-4 ${dark ? 'text-slate-100' : 'text-black'}`}>{selectedItem.title}</h2>
+                        <p className={`mb-4 ${dark ? 'text-slate-100' : 'text-black'}`}>{selectedItem.content}</p>
                     </div>
                 </div>
             )}
