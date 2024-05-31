@@ -2,23 +2,16 @@ import React from 'react';
 import '../css/index.css';
 import CardComponent from './CardComponent';
 
-
 const Form = ({ dark }) => {
+
     return (
         <>
             <CardComponent maxWidth="lg">
                 <form
-                    name="contact-form"
-                    method="POST"
-                    netlify-honeypot="bot-field"
                     action='https://submit-form.com/YE6bxUCmu'
+                    data-botpoison-public-key="pk_73e7f990-342b-49e3-8914-794d10d6a9a3"
                     className='fontheader w-full mx-auto px-4 sm:px-6 lg:px-8'
                 >
-                    <p className="hidden">
-                        <label>
-                            Do not fill this out if you are human: <input name="bot-field" />
-                        </label>
-                    </p>
                     <div className='mb-4'>
                         <label className='block text-gray-700 font-bold mb-2'>Name :</label>
                         <input
