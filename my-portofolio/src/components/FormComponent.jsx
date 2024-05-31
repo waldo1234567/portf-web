@@ -8,14 +8,17 @@ const Form = ({ dark }) => {
         <>
             <CardComponent maxWidth="lg">
                 <form
-                    name="contact"
+                    name="contact-form"
                     method="POST"
                     netlify-honeypot="bot-field"
-                    data-netlify="true"
-                    onSubmit="submit"
+                    action='https://submit-form.com/YE6bxUCmu'
                     className='fontheader w-full mx-auto px-4 sm:px-6 lg:px-8'
                 >
-                    <input type="hidden" name="form-name" value="contact"/>
+                    <p className="hidden">
+                        <label>
+                            Do not fill this out if you are human: <input name="bot-field" />
+                        </label>
+                    </p>
                     <div className='mb-4'>
                         <label className='block text-gray-700 font-bold mb-2'>Name :</label>
                         <input
