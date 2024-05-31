@@ -2,4 +2,3 @@
     base = "."
     publish = "build"
     command = "npm run build"
-    package_directory = "my-portofolio"
