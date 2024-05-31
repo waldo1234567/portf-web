@@ -10,11 +10,12 @@ const Form = ({ dark }) => {
                 <form 
                     name="contact" 
                     method="POST" 
-                    netlify
+                    netlify-honeypot="bot-field"
+                    data-netlify = "true"
                     onSubmit="submit"
                     className='fontheader w-full mx-auto px-4 sm:px-6 lg:px-8'
                 >
-                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="form-name" value="Contact" />
                     <div className='mb-4'>
                         <label className='block text-gray-700 font-bold mb-2'>Name :</label>
                         <input 
