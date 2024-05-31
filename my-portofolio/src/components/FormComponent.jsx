@@ -16,7 +16,7 @@ const Form = ({ dark }) => {
                     <input type="hidden" name="form-name" value="contact" />
 
                     <div className='mb-4'>
-                        <label htmlFor="name" className='block text-gray-700 font-bold mb-2'>Name :</label>
+                        <label className='block text-gray-700 font-bold mb-2'>Name :</label>
                         <input 
                             type='text' 
                             id="name" 
@@ -27,7 +27,7 @@ const Form = ({ dark }) => {
                     </div>
 
                     <div className='mb-4'>
-                        <label htmlFor="email" className='block text-gray-700 font-bold mb-2'>Email :</label>
+                        <label className='block text-gray-700 font-bold mb-2'>Email :</label>
                         <input 
                             type="email" 
                             id="email" 
@@ -38,7 +38,7 @@ const Form = ({ dark }) => {
                     </div>
 
                     <div className='mb-4'>
-                        <label htmlFor="message" className='block text-gray-700 font-bold mb-2'>Message :</label>
+                        <label  className='block text-gray-700 font-bold mb-2'>Message :</label>
                         <textarea 
                             id="message" 
                             name="message" 
