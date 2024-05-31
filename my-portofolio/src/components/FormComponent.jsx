@@ -10,11 +10,11 @@ const Form = ({ dark }) => {
                 <form 
                     name="contact" 
                     method="POST" 
-                    data-netlify="true" 
+                    netlify
+                    onSubmit="submit"
                     className='fontheader w-full mx-auto px-4 sm:px-6 lg:px-8'
                 >
                     <input type="hidden" name="form-name" value="contact" />
-
                     <div className='mb-4'>
                         <label className='block text-gray-700 font-bold mb-2'>Name :</label>
                         <input 
