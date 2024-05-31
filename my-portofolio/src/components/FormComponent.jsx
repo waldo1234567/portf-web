@@ -15,7 +15,7 @@ const Form = ({ dark }) => {
                     onSubmit="submit"
                     className='fontheader w-full mx-auto px-4 sm:px-6 lg:px-8'
                 >
-                    <input type="hidden" name="form-name" value="Contact" />
+                    <input type="hidden" name="contact" value="contact" />
                     <div className='mb-4'>
                         <label className='block text-gray-700 font-bold mb-2'>Name :</label>
                         <input 
