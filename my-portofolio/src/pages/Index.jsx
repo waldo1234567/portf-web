@@ -71,7 +71,7 @@ const Index = () => {
                                 <div className="flex flex-col">
                                     <p className={`text-2xl md:text-4xl font-semibold mb-2 md:mb-4 ${darkMode ? 'dark:text-slate-100' : 'text-black'}`}>Hi!, I'm Waldo</p>
                                     <p className={`text-base md:text-lg mb-2 ${darkMode ? "dark:text-neutral-500" : "text-neutral-700"}`}>and I am a website developer</p>
-                                    <p className={`mt-2 text-sm md:text-base ${darkMode ? "dark:text-slate-100" : ''}`}>A freshly graduated from a website development bootcamp program
+                                    <p className={`mt-2 text-sm md:text-base ${darkMode ? "dark:text-slate-100" : ''}`}>Recently graduated from a Fullstack website development bootcamp program
                                         currently open for job vacancy
                                     </p>
                                     <button className={`mt-4 ${darkMode ? 'dark:bg-yellow-400 hover:bg-yellow-300' : 'bg-blue-500 hover:bg-blue-700'} text-white font-bold py-2 px-2 rounded w-48 mx-auto md:mx-0`} onClick={scrollIntoContact} ><SendIcon className="mr-2" />Contact Me</button>
